@@ -655,10 +655,6 @@ CONTAINS
     ENDIF
   ENDSUBROUTINE initial_check
 
-
-
-
-
   FUNCTION  initial_data(x,y)
     REAL(DP) :: x,y
     REAL(DP) :: initial_data
@@ -666,7 +662,6 @@ CONTAINS
     temp = -100.*(x**2 + y**2)/(4*1.)
     initial_data = 100.*exp(temp)/(4*PI_D*1.)
   ENDFUNCTION initial_data
-
   
   RECURSIVE SUBROUTINE write_fn_value(a,file_id)
     TYPE(node), INTENT(IN) :: a
@@ -681,4 +676,5 @@ CONTAINS
        WRITE(file_id, "(3(1x,F15.10))") a%x, a%y, a%fn_value 
     ENDIF
   ENDSUBROUTINE write_fn_value
+
 ENDMODULE GENESIS

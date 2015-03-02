@@ -1,0 +1,1 @@
+The code uses finite differences on an adaptive grid to approximate the two-dimensional advection equation.  The adaptive grid is dynamically generated using multiresolution analysis, with the computational grid composed of a series of nested grids, each dyadically finer than the previous one.  The nested grids are stored using a dynamic tree, updated at each time step.
